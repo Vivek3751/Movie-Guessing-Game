@@ -1,5 +1,6 @@
 import random
 import os, time
+
 #sample input movies
 movies=["inception", "avatar", "gladiator", "interstellar", "titanic", "dangal", "bahubali",
 "shershaah", "pushpa"]
@@ -7,12 +8,15 @@ guess_count=0
 guessed_letters = []
 wrong_guesses = []
 movie = random.choice(movies)
+
 #Show user the user List of Movie Names for 5 seconds then ask him to guess
 print("Movies List:")
 for each in movies:
    print("-",each)
+   
 #wait for 5 sec
 time.sleep(5)
+
 #clear Console
 os.system("cls")
 
@@ -58,3 +62,4 @@ if "_" not in displayed_name:
     print(f"Congratulations! You guessed the movie: {movie}")
 else:
     print(f"Game Over! The movie was: {movie}")
+
